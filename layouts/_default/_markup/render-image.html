@@ -1,11 +1,3 @@
 <p class="markdown-image">
-  {{ $src := .Destination }}
-  {{ $original := resources.GetMatch $src }}
-  {{ if $original }}
-    {{ $processed := $original.Resize "800x" }} <!-- Resize image to a width of 800px; height is adjusted to maintain aspect ratio -->
-    <img src="{{ $processed.RelPermalink }}" alt="{{ .Text }}" {{ with .Title }}title="{{ . }}"{{ end }} />
-  {{ else }}
-    <!-- If the image is not found in resources, render the original image source -->
-    <img src="{{ $src | safeURL }}" alt="{{ .Text }}" {{ with .Title }}title="{{ . }}"{{ end }} />
-  {{ end }}
+  <img src="{{ .Destination | safeURL }}" alt="{{ .Text }}" {{ with .Title}} title="{{ . }}"{{ end }} />
 </p>
