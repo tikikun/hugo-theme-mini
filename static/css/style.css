@@ -42,6 +42,7 @@ table {
   margin: 40px 0;
   border-collapse: collapse;
   line-height: 1.5em;
+  overflow-x: auto;
 }
 
 th, td {
@@ -56,6 +57,7 @@ table td, td {
   padding: 10px 15px;
   border-width: 1px 0 0 0;
 }
+
 thead th, th {
   text-align: left;
   padding: 10px 15px;
